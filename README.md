@@ -8,8 +8,6 @@ I’m a Software Developer with a passion for creating educational games that te
 
 ## 🕹️ Games in the Portfolio
 
-### 1. **Poker Simulator** ♠️  
-An educational poker simulator that teaches probability, risk management, and decision-making skills.  
-**Tech Stack**: JavaScript, HTML5 Canvas  
-[Live Demo](#) | [Source Code](#)
+### 1. **Retirement Game** ♠️  
+The ultimate goal of the Retirement Game is to save $1,000,000 or more by the time you retire. Manage your savings wisely and learn about the power of compound interest while navigating the twists and turns of real-life financial scenarios. Can you reach your retirement goal?
 
