@@ -1,41 +1,19 @@
 /* Header.css */
-.header {
-    background-color: #f8f9fa;
-    padding: 20px;
+.header-banner {
+    width: 100%;
+    background-color: #3498db;
+    padding: 40px 0;
+    color: white;
     text-align: center;
-    border-bottom: 2px solid #eaeaea;
-}
-
-.header-title {
+  }
+  
+  .banner-title {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .banner-subtitle {
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.icon {
-    font-size: 30px;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.icon:hover {
-    color: #0073e6;
-}
-
-.linkedin:hover {
-    color: #0077b5;
-}
-
-.github:hover {
-    color: #333;
-}
-
-.instagram:hover {
-    color: #e4405f;
-}
+    margin-top: 10px;
+  }
+  

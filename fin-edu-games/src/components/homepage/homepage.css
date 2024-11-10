@@ -1,0 +1,20 @@
+.homepage-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .intro-section {
+    margin-bottom: 40px;
+  }
+  
+  .intro-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .intro-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
