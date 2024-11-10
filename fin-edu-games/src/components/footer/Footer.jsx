@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer__copyright">
-        <small>&copy; 2023 Kao Saelor. All rights reserved.</small>
+        <small>&copy; 2025 Kao Saelor. All rights reserved.</small>
       </div>
     </footer>
 
