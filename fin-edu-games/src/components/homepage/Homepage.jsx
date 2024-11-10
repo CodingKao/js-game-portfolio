@@ -1,7 +1,7 @@
 // HomePage.jsx
 import React from 'react';
 import './homepage.css';
-import GameList from '.gamelist/Gamelist';
+import GameList from '../gamelist/Gamelist'
 
 const HomePage = () => {
   return (
