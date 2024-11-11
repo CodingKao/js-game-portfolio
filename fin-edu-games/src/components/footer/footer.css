@@ -1,11 +1,35 @@
-footer {
-    background: var (--color-primary);
-    padding: 3rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer__copyright {
-    margin-bottom: 4rem;
-    font-size: 20px;
-}
+.footer {
+    background-color: #3498db; /* Blue background */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border-top: 5px solid #f39c12; /* Fun border at the top */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .copyright {
+    font-size: 14px;
+  }
+  
+  .social-media a {
+    margin-left: 15px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.2); /* Grow icons when hovered */
+  }
+  

@@ -1,29 +1,38 @@
 .game-list {
-    margin: 20px auto;
+    margin: 40px auto;
     max-width: 800px;
-    text-align: left;
   }
   
   .game-list h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    color: #e74c3c;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
   }
   
   .game-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    border: 2px dashed #2ecc71; /* Fun, playful border */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .game-item:hover {
+    background-color: #f1c40f; /* Bright hover effect */
   }
   
   .game-item h4 {
-    font-size: 22px;
-    margin: 0 0 5px 0;
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #3498db;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
   }
   
   .game-item p {
     font-size: 16px;
+    color: #34495e;
   }
+  
   
