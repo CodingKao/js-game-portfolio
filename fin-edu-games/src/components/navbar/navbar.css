@@ -1,0 +1,39 @@
+/* navbar.css */
+.navbar {
+  position: fixed;           /* Sticks to the side */
+  left: 0;                   /* Align to the left */
+  top: 0;                    /* Align to the top */
+  width: 200px;              /* Sidebar width */
+  height: 100vh;             /* Full viewport height */
+  background-color: #3498db; /* Sidebar background color */
+  padding-top: 20px;         /* Space from the top */
+}
+
+.navbar ul {
+  list-style-type: none;     /* Removes bullet points */
+  padding: 0;                /* Removes padding from the list */
+}
+
+.navbar ul li {
+  margin-bottom: 20px;       /* Adds space between items */
+}
+
+.navbar ul li a {
+  text-decoration: none;     /* Removes underline from links */
+  color: white;              /* Link color */
+  font-size: 18px;           /* Font size */
+  display: block;            /* Makes the link fill the li element */
+  padding: 10px;             /* Adds padding inside the links */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.navbar ul li a:hover {
+  background-color: #2980b9; /* Change background color on hover */
+  border-radius: 5px;        /* Rounded corners on hover */
+}
+
+/* Make sure the content does not overlap with the navbar */
+.main-content {
+  margin-left: 220px; /* The width of the sidebar + some spacing */
+  padding: 20px;
+}
