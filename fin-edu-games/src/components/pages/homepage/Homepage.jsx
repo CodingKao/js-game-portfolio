@@ -1,7 +1,6 @@
 // HomePage.jsx
 import React from 'react';
 import './homepage.css';
-import GameList from '../gamelist/Gamelist'
 
 const HomePage = () => {
   return (
@@ -13,8 +12,6 @@ const HomePage = () => {
           fundamentals of personal finance, investing, and money management.
         </p>
       </section>
-
-      <GameList />
     </div>
   );
 };
