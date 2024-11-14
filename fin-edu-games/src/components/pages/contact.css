@@ -1,37 +1,53 @@
 /* Contact Section Styling */
 #contact {
     padding: 2rem 0;
+    background-color: #f9f9f9;
 }
 
 .contact__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align everything to the left */
+    padding: 0 1rem;
 }
 
 .contact__options {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 .contact__option {
     background: #f1f1f1;
     border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align text to the left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact__option:hover {
+    transform: scale(1.05);
 }
 
 .contact__option-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #007bff;
 }
 
-.contact__option h4, .contact__option h5 {
-    margin: 0.5rem 0;
+.contact__option h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact__option h5 {
+    font-size: 1rem;
+    color: #555;
 }
 
 form {
@@ -39,26 +55,61 @@ form {
     flex-direction: column;
     width: 100%;
     max-width: 600px;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 0.8rem;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 8px;
     border: 1px solid #ddd;
+    font-size: 1.1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 form button {
-    padding: 0.8rem;
+    padding: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
+    font-size: 1.1rem;
     transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    align-self: flex-start; /* Align the button to the left */
 }
 
 form button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact__options {
+        width: 100%;
+    }
+
+    .contact__option {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+    form button {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
 }
