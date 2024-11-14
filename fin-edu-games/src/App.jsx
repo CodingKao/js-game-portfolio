@@ -11,7 +11,6 @@ import Game2 from './components/pages/Game2';
 import Game3 from './components/pages/Game3';
 import Game4 from './components/pages/Game4';
 import Game5 from './components/pages/Game5';
-import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
             <Route path="/game3" element={<Game3 />} />
             <Route path="/game4" element={<Game4 />} />
             <Route path="/game5" element={<Game5 />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
