@@ -1,0 +1,64 @@
+/* Contact Section Styling */
+#contact {
+    padding: 2rem 0;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.contact__option {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact__option-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.contact__option h4, .contact__option h5 {
+    margin: 0.5rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
