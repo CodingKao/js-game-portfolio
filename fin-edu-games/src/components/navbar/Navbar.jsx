@@ -14,7 +14,6 @@ const Navbar = () => {
         <li><Link to="/game3">Game 3</Link></li>
         <li><Link to="/game4">Game 4</Link></li>
         <li><Link to="/game5">Game 5</Link></li>
-        <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
     </nav>
