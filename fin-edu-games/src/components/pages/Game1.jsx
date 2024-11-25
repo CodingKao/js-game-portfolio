@@ -1,5 +1,7 @@
-// pages/Game1.jsx
 import React, { useState } from "react";
+import piggyBank from "../../assets/piggy-bank.png";
+import piggyBankBreak from "../../assets/piggy-bank-break.png";
+import coin from "../../assets/coin.png";
 
 const Game1 = () => {
   // State variables
@@ -7,6 +9,7 @@ const Game1 = () => {
   const [savings, setSavings] = useState(0);
   const [log, setLog] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [showCoins, setShowCoins] = useState(false);
 
   // Constants
   const retirementAge = 65;
@@ -81,13 +84,19 @@ const Game1 = () => {
     setSavings(0);
     setLog([]);
     setGameOver(false);
+    setShowCoins(false);
   };
 
-  // Calculate progress for progress bar
+  // Trigger coin animation when piggy bank breaks
   const progress = Math.min((savings / goal) * 100, 100);
 
+  if (progress >= 100 && !showCoins) {
+    setShowCoins(true);
+    setTimeout(() => setShowCoins(false), 3000); // End animation after 3 seconds
+  }
+
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <h1>The Retirement Game</h1>
       <p>
         Can you save $1,000,000 or more by the time you retire? Manage your
@@ -101,6 +110,8 @@ const Game1 = () => {
         <p>
           <strong>Savings:</strong> ${savings.toFixed(2)}
         </p>
+
+        {/* Progress Bar */}
         <div style={{ margin: "20px 0" }}>
           <div
             style={{
@@ -122,23 +133,77 @@ const Game1 = () => {
           </div>
           <p>{progress.toFixed(2)}% of your goal achieved!</p>
         </div>
+
+        <button onClick={handleNextYear} disabled={gameOver}>
+          {gameOver ? "Game Over" : "Next Year"}
+        </button>
+        <button onClick={resetGame} style={{ marginLeft: "10px" }}>
+          Reset Game
+        </button>
       </div>
 
-      <button onClick={handleNextYear} disabled={gameOver}>
-        {gameOver ? "Game Over" : "Next Year"}
-      </button>
-      <button onClick={resetGame} style={{ marginLeft: "10px" }}>
-        Reset Game
-      </button>
+      {/* Main Layout */}
+      <div style={{ display: "flex", marginTop: "20px" }}>
+        {/* Event Log */}
+        <div style={{ flex: 2, marginRight: "20px" }}>
+          <h3>Event Log:</h3>
+          <ul>
+            {log.map((event, index) => (
+              <li key={index}>{event}</li>
+            ))}
+          </ul>
+        </div>
 
-      <div style={{ marginTop: "20px" }}>
-        <h3>Event Log:</h3>
-        <ul>
-          {log.map((event, index) => (
-            <li key={index}>{event}</li>
-          ))}
-        </ul>
+        {/* Piggy Bank Icon */}
+        <div style={{ flex: 1, textAlign: "center", position: "relative" }}>
+          <img
+            src={progress >= 100 ? piggyBankBreak : piggyBank}
+            alt={progress >= 100 ? "Broken Piggy Bank" : "Piggy Bank"}
+            style={{
+              width: "150px",
+              height: "150px",
+            }}
+          />
+          {/* Coin Animation */}
+          {showCoins &&
+            Array(10)
+              .fill(0)
+              .map((_, index) => (
+                <img
+                  key={index}
+                  src={coin}
+                  alt="Coin"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    width: "30px",
+                    height: "30px",
+                    animation: `shoot-out ${3}s ease-in-out`,
+                    transform: `translate(-50%, -50%) rotate(${
+                      index * 36
+                    }deg)`,
+                  }}
+                />
+              ))}
+        </div>
       </div>
+
+      {/* CSS Animation */}
+      <style>
+        {`
+          @keyframes shoot-out {
+            0% {
+              transform: translate(-50%, -50%) scale(1);
+              opacity: 1;
+            }
+            100% {
+              transform: translate(calc(-50% + (50px - 50vw)), calc(-50% - 200px)) scale(0.5);
+              opacity: 0;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
